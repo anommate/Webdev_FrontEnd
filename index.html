@@ -1,0 +1,96 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="imagegallery.css">
+      <title>My Image Gallery</title>
+  </head>
+  <style>
+    /* Css for font and margin of body */
+.body{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* Css for header cotainer text */
+  .header{
+      text-align: center;
+      padding: 30px;
+  }
+  /* Css to have the *parent* row container flex and wrap */
+  .row{
+      flex-wrap: wrap;
+      display: flex;
+      padding: 0 4px;
+  }
+  /* Css for all the child column container */
+  .column{    
+      flex: 20%;
+      max-width: max-content;
+      max-height: max-content;
+    padding: 4px;
+  }
+  /* Css for img */
+  .column img{
+      width: 100%;
+      margin-top: 8px;
+      vertical-align: middle;
+
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 40%;
+      max-width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 80%;
+      max-width: 100%;
+    }
+  }
+
+  </style>
+  <body>
+      <!-- Header -->
+      <div class="header">
+      <h1> Responsive Image Gallery</h1>
+      <p>Resize the browser window to see results</p>
+      </div>
+      <!-- Photo Grid -->
+      <div class="row">
+          <!-- first column -->
+          <div class="column">
+              <img src="https://cdn.pixabay.com/photo/2020/04/13/03/05/ecuador-5036600_1280.jpg" alt="">
+              <br>
+              <img src="https://cdn.pixabay.com/photo/2016/09/19/00/23/landscape-1679341_1280.jpg" alt="">
+              <br>
+              <img src="https://cdn.pixabay.com/photo/2019/12/05/19/41/berlin-4675954_1280.jpg" alt="">
+              <br>
+              <img src="https://cdn.pixabay.com/photo/2020/06/02/16/10/blackandwhite-5251597_1280.jpg" alt="">
+          </div>
+          <div class="column">
+              <img src="https://cdn.pixabay.com/photo/2022/01/05/17/03/bnw-6917557_1280.jpg" alt="">
+              <img src="https://cdn.pixabay.com/photo/2021/01/21/17/19/landscape-5937930_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2023/04/11/16/16/lighthouse-7917690_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2021/02/25/15/36/tree-6049335_1280.jpg" alt="" height="37.5%">
+          </div>
+          <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2019/04/05/19/55/tree-4105916_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2014/09/18/12/44/trees-450854_1280.jpg" alt="" height="567px">
+            <img src="https://cdn.pixabay.com/photo/2017/07/22/09/03/road-2528145_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2022/05/31/09/50/lake-7233236_1280.jpg" alt="">
+          </div>
+          <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2017/09/04/16/33/cloud-2714617_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2017/12/29/17/03/nature-3048072_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2017/04/15/12/08/lost-places-2232277_1280.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2018/08/03/18/41/boardwalk-3582517_1280.jpg" alt="" height="522px">
+          </div>
+      </div>
+
+  </body>
+  </html>
